@@ -21,6 +21,7 @@ const DetailImage = ({ image, alt }) => {
 
 const BoneStructure = () => {
   const [selectedPart, setSelectedPart] = useState(null)
+  const baseUrl = import.meta.env.BASE_URL
 
   const bodyParts = [
     {
@@ -29,7 +30,7 @@ const BoneStructure = () => {
       category: 'Bone',
       description: 'The skull is a bony structure that forms the head. It protects the brain and provides structure to the face.',
       function: 'Protects the brain, houses sensory organs, provides attachment points for muscles',
-      image: '/images/bones/skull.png'
+      image: `${baseUrl}images/bones/skull.png`
     },
     {
       id: 'spine',
@@ -37,7 +38,7 @@ const BoneStructure = () => {
       category: 'Bone',
       description: 'The spine consists of 33 vertebrae that protect the spinal cord and provide structural support.',
       function: 'Supports the body, protects spinal cord, enables movement and flexibility',
-      image: '/images/bones/spine.png'
+      image: `${baseUrl}images/bones/spine.png`
     },
     {
       id: 'ribcage',
@@ -45,7 +46,7 @@ const BoneStructure = () => {
       category: 'Bone',
       description: 'The ribcage consists of 12 pairs of ribs connected to the thoracic vertebrae.',
       function: 'Protects heart and lungs, assists in breathing, provides structural support',
-      image: '/images/bones/ribcage.png'
+      image: `${baseUrl}images/bones/ribcage.png`
     },
     {
       id: 'humerus',
@@ -53,7 +54,7 @@ const BoneStructure = () => {
       category: 'Bone',
       description: 'The humerus is the long bone in the upper arm, extending from shoulder to elbow.',
       function: 'Connects shoulder to elbow, enables arm movement, provides muscle attachment',
-      image: '/images/bones/humerus.png'
+      image: `${baseUrl}images/bones/humerus.png`
     },
     {
       id: 'femur',
@@ -61,7 +62,7 @@ const BoneStructure = () => {
       category: 'Bone',
       description: 'The femur is the longest and strongest bone in the body, located in the thigh.',
       function: 'Supports body weight, enables walking and running, provides muscle attachment',
-      image: '/images/bones/femur.png'
+      image: `${baseUrl}images/bones/femur.png`
     },
     {
       id: 'tibia',
@@ -69,7 +70,7 @@ const BoneStructure = () => {
       category: 'Bone',
       description: 'The tibia is the larger of the two bones in the lower leg, also known as the shinbone.',
       function: 'Bears body weight, connects knee to ankle, provides stability',
-      image: '/images/bones/tibia.png'
+      image: `${baseUrl}images/bones/tibia.png`
     },
     {
       id: 'biceps',
@@ -77,7 +78,7 @@ const BoneStructure = () => {
       category: 'Muscle',
       description: 'The biceps is a two-headed muscle located on the front of the upper arm.',
       function: 'Flexes elbow, supinates forearm, assists in shoulder flexion',
-      image: '/images/bones/biceps.png'
+      image: `${baseUrl}images/bones/biceps.png`
     },
     {
       id: 'triceps',
@@ -85,7 +86,7 @@ const BoneStructure = () => {
       category: 'Muscle',
       description: 'The triceps is a three-headed muscle on the back of the upper arm.',
       function: 'Extends elbow, assists in shoulder extension and adduction',
-      image: '/images/bones/triceps.png'
+      image: `${baseUrl}images/bones/triceps.png`
     },
     {
       id: 'quadriceps',
@@ -93,7 +94,7 @@ const BoneStructure = () => {
       category: 'Muscle',
       description: 'The quadriceps is a group of four muscles on the front of the thigh.',
       function: 'Extends knee, flexes hip, stabilizes knee joint',
-      image: '/images/bones/quadriceps.png'
+      image: `${baseUrl}images/bones/quadriceps.png`
     },
     {
       id: 'hamstrings',
@@ -101,7 +102,7 @@ const BoneStructure = () => {
       category: 'Muscle',
       description: 'The hamstrings are a group of three muscles on the back of the thigh.',
       function: 'Flexes knee, extends hip, stabilizes knee and hip joints',
-      image: '/images/bones/hamstrings.png'
+      image: `${baseUrl}images/bones/hamstrings.png`
     },
     {
       id: 'deltoid',
@@ -109,7 +110,7 @@ const BoneStructure = () => {
       category: 'Muscle',
       description: 'The deltoid is a large triangular muscle covering the shoulder joint.',
       function: 'Abducts, flexes, extends, and rotates the arm at shoulder',
-      image: '/images/bones/deltoid.png'
+      image: `${baseUrl}images/bones/deltoid.png`
     },
     {
       id: 'latissimus',
@@ -117,7 +118,7 @@ const BoneStructure = () => {
       category: 'Muscle',
       description: 'The latissimus dorsi is a large, flat muscle on the back.',
       function: 'Extends, adducts, and medially rotates the arm, assists in breathing',
-      image: '/images/bones/latissimus.png'
+      image: `${baseUrl}images/bones/latissimus.png`
     }
   ]
 

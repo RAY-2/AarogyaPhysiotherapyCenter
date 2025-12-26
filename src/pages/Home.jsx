@@ -33,15 +33,16 @@ const PainAreaCard = ({ area }) => {
 }
 
 const Home = () => {
+  const baseUrl = import.meta.env.BASE_URL
   const painAreas = [
-    { id: 'neck', name: 'Neck Pain', image: '/images/pain-areas/neck.png' },
-    { id: 'back', name: 'Back Pain', image: '/images/pain-areas/back.png' },
-    { id: 'shoulder', name: 'Shoulder Pain', image: '/images/pain-areas/shoulder.png' },
-    { id: 'knee', name: 'Knee Pain', image: '/images/pain-areas/knee.png' },
-    { id: 'wrist', name: 'Wrist Pain', image: '/images/pain-areas/wrist.png' },
-    { id: 'ankle', name: 'Ankle Pain', image: '/images/pain-areas/ankle.png' },
-    { id: 'hip', name: 'Hip Pain', image: '/images/pain-areas/hip.png' },
-    { id: 'elbow', name: 'Elbow Pain', image: '/images/pain-areas/elbow.png' }
+    { id: 'neck', name: 'Neck Pain', image: `${baseUrl}images/pain-areas/neck.png` },
+    { id: 'back', name: 'Back Pain', image: `${baseUrl}images/pain-areas/back.png` },
+    { id: 'shoulder', name: 'Shoulder Pain', image: `${baseUrl}images/pain-areas/shoulder.png` },
+    { id: 'knee', name: 'Knee Pain', image: `${baseUrl}images/pain-areas/knee.png` },
+    { id: 'wrist', name: 'Wrist Pain', image: `${baseUrl}images/pain-areas/wrist.png` },
+    { id: 'ankle', name: 'Ankle Pain', image: `${baseUrl}images/pain-areas/ankle.png` },
+    { id: 'hip', name: 'Hip Pain', image: `${baseUrl}images/pain-areas/hip.png` },
+    { id: 'elbow', name: 'Elbow Pain', image: `${baseUrl}images/pain-areas/elbow.png` }
   ]
 
   return (

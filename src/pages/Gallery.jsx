@@ -43,41 +43,42 @@ const ImageSlider = ({ images, interval = 2000 }) => {
 }
 
 const Gallery = () => {
+  const baseUrl = import.meta.env.BASE_URL
   // Placeholder images - replace with actual image paths
   const clinicImages = [
-    '/images/general/clinic-1.jpg',
-    '/images/general/clinic-2.jpg',
-    '/images/general/clinic-3.jpg',
-    '/images/general/clinic-4.jpg',
-    '/images/general/clinic-5.jpg'
+    `${baseUrl}images/general/clinic-1.jpg`,
+    `${baseUrl}images/general/clinic-2.jpg`,
+    `${baseUrl}images/general/clinic-3.jpg`,
+    `${baseUrl}images/general/clinic-4.jpg`,
+    `${baseUrl}images/general/clinic-5.jpg`
   ]
 
   const patientImages = [
-    '/images/general/patient-1.jpg',
-    '/images/general/patient-2.jpg',
-    '/images/general/patient-3.jpg',
-    '/images/general/patient-4.jpg',
-    '/images/general/patient-5.jpg'
+    `${baseUrl}images/general/patient-1.jpg`,
+    `${baseUrl}images/general/patient-2.jpg`,
+    `${baseUrl}images/general/patient-3.jpg`,
+    `${baseUrl}images/general/patient-4.jpg`,
+    `${baseUrl}images/general/patient-5.jpg`
   ]
 
   const achievements = [
     {
-      image: '/images/general/achievement-1.jpg',
+      image: `${baseUrl}images/general/achievement-1.jpg`,
       title: 'Best Physiotherapy Center 2023',
       description: 'Awarded for excellence in patient care and innovative treatment methods'
     },
     {
-      image: '/images/general/achievement-2.jpg',
+      image: `${baseUrl}images/general/achievement-2.jpg`,
       title: 'Certified Healthcare Provider',
       description: 'Recognized by the National Healthcare Association for quality services'
     },
     {
-      image: '/images/general/achievement-3.jpg',
+      image: `${baseUrl}images/general/achievement-3.jpg`,
       title: 'Patient Satisfaction Award',
       description: 'Achieved 98% patient satisfaction rate for three consecutive years'
     },
     {
-      image: '/images/general/achievement-4.jpg',
+      image: `${baseUrl}images/general/achievement-4.jpg`,
       title: 'Innovation in Rehabilitation',
       description: 'Awarded for implementing cutting-edge technology in physiotherapy'
     }
@@ -103,7 +104,7 @@ const Gallery = () => {
             <div className="doctor-card">
               <div className="doctor-image-container">
                 <img 
-                  src="/images/general/doctor.jpg" 
+                  src={`${baseUrl}images/general/doctor.jpg`}
                   alt="Doctor" 
                   className="doctor-image"
                 />
@@ -125,7 +126,7 @@ const Gallery = () => {
             <div className="doctor-card">
               <div className="doctor-image-container">
                 <img 
-                  src="/images/general/assistant.jpg" 
+                  src={`${baseUrl}images/general/assistant.jpg`}
                   alt="Assistant" 
                   className="doctor-image"
                 />
