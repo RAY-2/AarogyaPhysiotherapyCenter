@@ -1,0 +1,159 @@
+.machines-page {
+  min-height: 100vh;
+  padding: 40px 0;
+  background-color: var(--color-light-blue);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--color-dark-blue);
+}
+
+.page-title {
+  color: var(--color-blue);
+  margin-bottom: 15px;
+}
+
+.page-subtitle {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.machines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.machine-card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.machine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.machine-image-container {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--color-border);
+  background: linear-gradient(135deg, var(--color-light-blue) 0%, var(--color-white) 100%);
+}
+
+.machine-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.machine-card:hover .machine-image {
+  transform: scale(1.05);
+}
+
+.machine-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-light-blue) 0%, var(--color-white) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.image-icon {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.image-note {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  padding: 0 20px;
+}
+
+.machine-content {
+  padding: 30px;
+}
+
+.machine-content h2 {
+  color: var(--color-blue);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.machine-section {
+  margin-bottom: 20px;
+}
+
+.machine-section:last-child {
+  margin-bottom: 0;
+}
+
+.machine-section h3 {
+  color: var(--color-green);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.machine-section p {
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .machines-page {
+    padding: 30px 0;
+  }
+
+  .machines-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .machine-image-container {
+    height: 200px;
+  }
+
+  .image-icon {
+    font-size: 3rem;
+  }
+
+  .machine-content {
+    padding: 25px 20px;
+  }
+
+  .machine-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .machine-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .machine-section p {
+    font-size: 1rem;
+  }
+}

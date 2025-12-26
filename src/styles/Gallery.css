@@ -1,0 +1,280 @@
+.gallery {
+  min-height: 100vh;
+}
+
+.gallery-section,
+.patients-section {
+  background-color: var(--color-white);
+}
+
+.doctors-section {
+  background-color: var(--color-light-blue);
+}
+
+.hall-of-fame-section {
+  background-color: var(--color-white);
+}
+
+/* Image Slider Styles */
+.slider-wrapper {
+  max-width: 900px;
+  margin: 40px auto 0;
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot.active {
+  background-color: var(--color-white);
+  width: 30px;
+  border-radius: 6px;
+}
+
+.dot:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Doctors Section */
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doctor-card {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-hover);
+  transition: transform 0.3s ease;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+}
+
+.doctor-image-container {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: var(--color-light-blue);
+}
+
+.doctor-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.doctor-info {
+  padding: 30px;
+}
+
+.doctor-info h3 {
+  color: var(--color-blue);
+  margin-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.doctor-role {
+  color: var(--color-green);
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.doctor-qualifications {
+  margin-top: 20px;
+}
+
+.doctor-qualifications p {
+  margin-bottom: 10px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.doctor-qualifications ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.doctor-qualifications li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  color: var(--color-text-light);
+}
+
+.doctor-qualifications li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+/* Hall of Fame Section */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.achievement-card {
+  background-color: var(--color-light-blue);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.achievement-image-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.achievement-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover .achievement-image {
+  transform: scale(1.05);
+}
+
+.achievement-info {
+  padding: 25px;
+}
+
+.achievement-info h3 {
+  color: var(--color-blue);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.achievement-info p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-slider {
+    height: 350px;
+  }
+
+  .slider-wrapper {
+    margin: 30px 15px 0;
+  }
+
+  .doctors-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 30px;
+  }
+
+  .doctor-image-container {
+    height: 300px;
+  }
+
+  .doctor-info {
+    padding: 25px 20px;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  .achievement-image-container {
+    height: 200px;
+  }
+
+  .achievement-info {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-slider {
+    height: 250px;
+  }
+
+  .doctor-image-container {
+    height: 250px;
+  }
+
+  .achievement-image-container {
+    height: 180px;
+  }
+}
+

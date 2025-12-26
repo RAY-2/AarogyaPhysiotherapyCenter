@@ -1,0 +1,221 @@
+.bone-structure-page {
+  min-height: 100vh;
+  padding: 40px 0;
+  background-color: var(--color-light-blue);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--color-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: var(--color-dark-blue);
+}
+
+.page-title {
+  color: var(--color-blue);
+  margin-bottom: 15px;
+}
+
+.page-subtitle {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.anatomy-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.body-parts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.body-part-card {
+  background-color: var(--color-white);
+  border: 3px solid var(--color-border);
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.body-part-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-blue);
+}
+
+.body-part-card.active {
+  border-color: var(--color-green);
+  background-color: var(--color-light-blue);
+}
+
+.part-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.body-part-card h3 {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.part-category {
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: var(--color-light-blue);
+  color: var(--color-blue);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.body-part-card.active .part-category {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.detail-panel {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow-hover);
+  margin-top: 20px;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid var(--color-border);
+}
+
+.detail-icon {
+  font-size: 4rem;
+}
+
+.detail-header h2 {
+  color: var(--color-blue);
+  margin-bottom: 10px;
+}
+
+.detail-category {
+  display: inline-block;
+  padding: 6px 18px;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.detail-image-section {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.detail-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  object-fit: contain;
+  background-color: var(--color-light-blue);
+  padding: 20px;
+}
+
+.detail-section h3 {
+  color: var(--color-blue);
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.detail-section p {
+  color: var(--color-text);
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.instruction-box {
+  background-color: var(--color-white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  margin-top: 40px;
+  text-align: center;
+}
+
+.instruction-box h3 {
+  color: var(--color-blue);
+  margin-bottom: 15px;
+}
+
+.instruction-box p {
+  color: var(--color-text-light);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .bone-structure-page {
+    padding: 30px 0;
+  }
+
+  .body-parts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .body-part-card {
+    padding: 20px 15px;
+  }
+
+  .part-icon {
+    font-size: 2.5rem;
+  }
+
+  .body-part-card h3 {
+    font-size: 1rem;
+  }
+
+  .detail-panel {
+    padding: 25px 20px;
+  }
+
+  .detail-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .detail-icon {
+    font-size: 3rem;
+  }
+
+  .instruction-box {
+    padding: 25px 20px;
+  }
+}
