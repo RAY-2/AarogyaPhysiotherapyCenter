@@ -2,8 +2,8 @@ import React from 'react'
 import '../styles/SocialButtons.css'
 
 const SocialButtons = () => {
-  const whatsappNumber = 'YOUR_WHATSAPP_NUMBER' // Replace with actual number
-  const youtubeChannel = 'YOUR_YOUTUBE_CHANNEL' // Replace with actual channel
+  const whatsappNumber = '919650908779' // 9650908779 with country code
+  const youtubeChannel = 'https://www.youtube.com/channel/UCXigje96TS4WwZ7Q4uZEdyw'
 
   return (
     <div className="social-buttons">
@@ -18,7 +18,7 @@ const SocialButtons = () => {
         <span className="social-icon">💬</span>
       </a>
       <a
-        href={`https://youtube.com/${youtubeChannel}`}
+        href={youtubeChannel}
         target="_blank"
         rel="noopener noreferrer"
         className="social-button youtube-button"

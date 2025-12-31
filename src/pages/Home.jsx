@@ -71,17 +71,14 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <Pricing />
+
       {/* Features Section */}
       <section className="section features">
         <div className="container">
           <h2 className="section-title">Our Services</h2>
           <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">🏃</div>
-              <h3>Exercise Programs</h3>
-              <p>Interactive 3D exercise models for pain relief and rehabilitation</p>
-              <Link to="/" className="feature-link">Explore Exercises →</Link>
-            </div>
             <div className="feature-card">
               <div className="feature-icon">📚</div>
               <h3>Medical Learning</h3>
@@ -97,9 +94,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Pricing Section */}
-      <Pricing />
 
       {/* Appointment Booking */}
       <section className="section appointment-section">

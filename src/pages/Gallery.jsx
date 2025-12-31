@@ -105,19 +105,19 @@ const Gallery = () => {
               <div className="doctor-image-container">
                 <img 
                   src={`${baseUrl}images/general/doctor.jpg`}
-                  alt="Doctor" 
+                  alt="Dr. Baljit Singh" 
                   className="doctor-image"
                 />
               </div>
               <div className="doctor-info">
-                <h3>Dr. [Doctor Name]</h3>
+                <h3>Dr. Baljit Singh</h3>
                 <p className="doctor-role">Physiotherapist</p>
                 <div className="doctor-qualifications">
                   <p><strong>Qualifications:</strong></p>
                   <ul>
-                    <li>BPT (Bachelor of Physiotherapy)</li>
-                    <li>MPT (Master of Physiotherapy)</li>
-                    <li>10+ years of experience</li>
+                    <li>Retired Army Physiotherapist</li>
+                    <li>More than 30 years of experience</li>
+                    <li>Expert in rehabilitation and pain management</li>
                   </ul>
                 </div>
               </div>
@@ -127,12 +127,12 @@ const Gallery = () => {
               <div className="doctor-image-container">
                 <img 
                   src={`${baseUrl}images/general/assistant.jpg`}
-                  alt="Assistant" 
+                  alt="Rishant" 
                   className="doctor-image"
                 />
               </div>
               <div className="doctor-info">
-                <h3>[Assistant Name]</h3>
+                <h3>Rishant</h3>
                 <p className="doctor-role">Physiotherapy Assistant</p>
                 <div className="doctor-qualifications">
                   <p><strong>Qualifications:</strong></p>

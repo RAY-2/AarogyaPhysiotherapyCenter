@@ -4,8 +4,7 @@ import '../styles/Contact.css'
 
 const Contact = () => {
   const whatsappNumber = '919650908779' // 9650908779 with country code
-  const phoneNumber1 = '9650908779'
-  const phoneNumber2 = '9310473013'
+  const phoneNumber = '9650908779'
   const email = 'aarogyaphysiotherapycenter@gmail.com'
   const address = 'Aarogya Physiotherapy Center, J32, Vatika road, near Baba Kabab, behind Elite gym, sector 82, Gurugram, Haryana - 122004'
 
@@ -35,13 +34,10 @@ const Contact = () => {
               <h3>Phone</h3>
               <div className="phone-numbers">
                 <div className="phone-item">
-                  <a href={`tel:${phoneNumber1}`} className="phone-link">{phoneNumber1}</a>
+                  <a href={`tel:${phoneNumber}`} className="phone-link">{phoneNumber}</a>
                   <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="whatsapp-link-small">
                     WhatsApp
                   </a>
-                </div>
-                <div className="phone-item">
-                  <a href={`tel:${phoneNumber2}`} className="phone-link">{phoneNumber2}</a>
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@ const AppointmentForm = () => {
     message: ''
   })
 
-  const whatsappNumber = 'YOUR_WHATSAPP_NUMBER' // Replace with actual number
+  const whatsappNumber = '919650908779' // 9650908779 with country code
 
   const handleChange = (e) => {
     setFormData({

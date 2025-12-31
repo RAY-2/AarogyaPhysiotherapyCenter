@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import '../styles/Testimonials.css'
 
 const Testimonials = () => {
@@ -58,6 +59,14 @@ const Testimonials = () => {
               <p className="testimonial-date">{testimonial.date}</p>
             </div>
           ))}
+        </div>
+        <div className="testimonials-links" style={{ marginTop: '2rem', textAlign: 'center' }}>
+          <Link to="/gallery" className="btn btn-green" style={{ marginRight: '1rem' }}>
+            View Gallery
+          </Link>
+          <Link to="/careers" className="btn btn-blue">
+            Career Opportunities
+          </Link>
         </div>
       </div>
     </section>
