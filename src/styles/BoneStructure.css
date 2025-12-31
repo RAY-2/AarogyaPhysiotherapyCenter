@@ -66,6 +66,19 @@
 .part-icon {
   font-size: 3rem;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.part-image {
+  max-width: 100%;
+  max-height: 120px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .body-part-card h3 {
@@ -145,6 +158,48 @@
   object-fit: contain;
   background-color: var(--color-light-blue);
   padding: 20px;
+}
+
+.bone-3d-viewer {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background-color: var(--color-light-blue);
+}
+
+.viewer-instruction {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 0.9rem;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+}
+
+.viewer-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--color-blue);
+  font-weight: 600;
+  z-index: 10;
+}
+
+.bone-3d-viewer-error {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffebee;
+  border: 2px solid #f44336;
+  color: #c62828;
+  text-align: center;
 }
 
 .detail-section h3 {

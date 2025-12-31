@@ -7,6 +7,11 @@ export default defineConfig({
   base: '/AarogyaPhysiotherapyCenter/',
   server: {
     port: 3000,
-    open: true
-  }
+    open: true,
+    fs: {
+      // Allow serving files from the project root
+      strict: false
+    }
+  },
+  assetsInclude: ['**/*.glb', '**/*.gltf']
 })

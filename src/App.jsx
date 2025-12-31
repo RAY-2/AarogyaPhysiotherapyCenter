@@ -6,6 +6,7 @@ import SocialButtons from './components/SocialButtons'
 import Home from './pages/Home'
 import Exercises from './pages/Exercises'
 import BoneStructure from './pages/BoneStructure'
+import BoneDetail from './pages/BoneDetail'
 import Machines from './pages/Machines'
 import Contact from './pages/Contact'
 import Careers from './pages/Careers'
@@ -18,6 +19,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/exercises/:painArea" element={<Exercises />} />
+        <Route path="/bone-structure/:boneId" element={<BoneDetail />} />
         <Route path="/bone-structure" element={<BoneStructure />} />
         <Route path="/machines" element={<Machines />} />
         <Route path="/contact" element={<Contact />} />

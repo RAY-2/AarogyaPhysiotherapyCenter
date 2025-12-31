@@ -1,14 +1,17 @@
-import React, { Suspense } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
-import ExerciseModel from '../components/ExerciseModel'
+import ExerciseImageSequence from '../components/ExerciseImageSequence'
+import { loadExercisesForPainArea, getPainAreaTitle } from '../utils/exerciseLoader'
 import '../styles/Exercises.css'
 
 const Exercises = () => {
   const { painArea } = useParams()
+  const [exercises, setExercises] = useState([])
+  const [title, setTitle] = useState('')
+  const [loading, setLoading] = useState(true)
 
-  const exerciseData = {
+  // Fallback exercise data for pain areas without folder-based exercises
+  const fallbackExerciseData = {
     neck: {
       title: 'Neck Pain Relief Exercises',
       exercises: [
@@ -75,40 +78,74 @@ const Exercises = () => {
     }
   }
 
-  const data = exerciseData[painArea] || exerciseData.neck
+  // Load exercises dynamically
+  useEffect(() => {
+    const loadExercises = async () => {
+      setLoading(true)
+      
+      // Try to load from folders first
+      const folderExercises = await loadExercisesForPainArea(painArea)
+      
+      if (folderExercises) {
+        // Use folder-based exercises
+        setExercises(folderExercises)
+        setTitle(getPainAreaTitle(painArea))
+      } else {
+        // Fall back to static data
+        const fallbackData = fallbackExerciseData[painArea] || fallbackExerciseData.neck
+        setExercises(fallbackData.exercises)
+        setTitle(fallbackData.title)
+      }
+      
+      setLoading(false)
+    }
+
+    loadExercises()
+  }, [painArea])
+
+  if (loading) {
+    return (
+      <div className="exercises-page">
+        <div className="container">
+          <Link to="/" className="back-link">← Back to Home</Link>
+          <div className="loading-container">
+            <p>Loading exercises...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="exercises-page">
       <div className="container">
         <Link to="/" className="back-link">← Back to Home</Link>
-        <h1 className="page-title">{data.title}</h1>
-        <p className="page-subtitle">Use the 3D model below to see the exercise movements. Rotate, zoom, and explore the model from all angles.</p>
-
-        <div className="exercise-viewer">
-          <div className="model-container">
-            <Canvas>
-              <Suspense fallback={null}>
-                <PerspectiveCamera makeDefault position={[0, 0, 5]} />
-                <ambientLight intensity={0.5} />
-                <directionalLight position={[10, 10, 5]} intensity={1} />
-                <ExerciseModel painArea={painArea} />
-                <OrbitControls enableZoom={true} enablePan={true} enableRotate={true} />
-              </Suspense>
-            </Canvas>
-          </div>
-        </div>
+        <h1 className="page-title">{title}</h1>
+        <p className="page-subtitle">Follow the exercise instructions below. Each exercise includes a demonstration video to help you perform it correctly.</p>
 
         <div className="exercises-list">
           <h2>Exercise Instructions</h2>
-          {data.exercises.map((exercise, index) => (
-            <div key={index} className="exercise-item">
-              <div className="exercise-number">{index + 1}</div>
-              <div className="exercise-content">
-                <h3>{exercise.name}</h3>
-                <p>{exercise.description}</p>
-              </div>
+          {exercises.length === 0 ? (
+            <p>No exercises available for this pain area.</p>
+          ) : (
+            <div className="exercises-grid">
+              {exercises.map((exercise, index) => (
+                <div key={index} className="exercise-card">
+                  <div className="exercise-header">
+                    <div className="exercise-number">{index + 1}</div>
+                    <h3 className="exercise-name">{exercise.name}</h3>
+                  </div>
+                  <div className="exercise-image-section">
+                    <ExerciseImageSequence 
+                      painArea={painArea} 
+                      exerciseName={exercise.folderName || exercise.name} 
+                    />
+                  </div>
+                  <p className="exercise-description">{exercise.description}</p>
+                </div>
+              ))}
             </div>
-          ))}
+          )}
         </div>
 
         <div className="exercise-tips">
