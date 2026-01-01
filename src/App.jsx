@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SocialButtons from './components/SocialButtons'
+import ScrollToTop from './components/ScrollToTop'
 import Home from './pages/Home'
 import Exercises from './pages/Exercises'
 import BoneStructure from './pages/BoneStructure'
@@ -15,6 +16,7 @@ import Gallery from './pages/Gallery'
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
